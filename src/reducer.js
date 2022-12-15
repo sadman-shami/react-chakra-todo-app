@@ -1,4 +1,4 @@
-import _ from "lodash";
+import { cloneDeep } from "lodash";
 
 const initialValue = {
   todos: [],
@@ -12,7 +12,7 @@ const reducer = (state, action) => {
       };
 
     case "addTodo":
-      const copyTodos = _.cloneDeep(state.todos);
+      const copyTodos = cloneDeep(state.todos);
       copyTodos.unshift(action.todo);
       localStorage.setItem("todos", JSON.stringify(copyTodos));
       return {
@@ -20,7 +20,7 @@ const reducer = (state, action) => {
       };
 
     case "upDateStatus":
-      let copiedTodo = _.cloneDeep(state.todos);
+      let copiedTodo = cloneDeep(state.todos);
       let todo = copiedTodo.filter((todo) => todo.id === action.todoId);
       todo[0].completed = !todo[0].completed;
       localStorage.setItem("todos", JSON.stringify(copiedTodo));
@@ -29,7 +29,7 @@ const reducer = (state, action) => {
       };
 
     case "deleteTodo":
-      let copiedTodos = _.cloneDeep(state.todos);
+      let copiedTodos = cloneDeep(state.todos);
       let selectedTodo = copiedTodos.filter(
         (todo) => todo.id !== action.todoId
       );
