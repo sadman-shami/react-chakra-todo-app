@@ -16,7 +16,7 @@ const Todos = () => {
         alignItems="center"
       >
         {todos.length > 0 &&
-          todos.map((todo, i) => (
+          todos.map((todo) => (
             <Todo
               key={todo.id}
               status={todo?.completed}
