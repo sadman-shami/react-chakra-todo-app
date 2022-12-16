@@ -13,7 +13,7 @@ const TodoHeader = () => {
 
   const bgGradient = useColorModeValue(
     "linear(to-r, teal.500, green.500)",
-    "linear(to-l, #7928CA, #FF0080)"
+    "linear(to-r, red.500, pink.500)"
   );
 
   return (
