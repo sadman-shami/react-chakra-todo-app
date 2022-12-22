@@ -12,7 +12,7 @@ This is project is made using React Context Api and Localstorage.
 ```sh
 # git clone this repository 🦑
 git clone https://github.com/sadman-shami/react-chakra-todo-app.git
-cd vite-tailwind-boilerplate
+cd react-chakra-todo-app
 
 # install dependencies
 pnmp install
